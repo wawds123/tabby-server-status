@@ -1,0 +1,29 @@
+{
+  "name": "tabby-server-status",
+  "version": "0.1.0",
+  "description": "SSH 탭 하단에 서버 상태바(CPU/MEM/DISK/LOAD/UPTIME)를 표시",
+  "keywords": [
+    "tabby-plugin"
+  ],
+  "main": "dist/index.js",
+  "author": "jackson",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wawds123/tabby-server-status.git"
+  },
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "cd ../tabby && ./node_modules/.bin/webpack --config tabby-server-status/webpack.config.mjs --color",
+    "watch": "cd ../tabby && ./node_modules/.bin/webpack --config tabby-server-status/webpack.config.mjs --watch --color"
+  },
+  "peerDependencies": {
+    "@angular/core": "^15",
+    "@angular/common": "^15",
+    "rxjs": "^7",
+    "tabby-core": "*",
+    "tabby-terminal": "*",
+    "tabby-ssh": "*"
+  }
+}
